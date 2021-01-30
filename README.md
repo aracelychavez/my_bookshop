@@ -51,7 +51,7 @@ sqlite3 db/my-bookshop.db -cmd .dump  (Check .tables, Exit .quit)
 
 cds watch
 
-Test Postman  (Postman.json)
+Test Postman  (Import File Postman.json in the wizard)
 
 Package.json kind: Hana
 
