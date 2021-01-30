@@ -49,17 +49,16 @@ npm add @sap/hana-client --save
 cf create-service hanatrial hdi-shared my-bookshop-db
 
 cds build --production   (create tables and manifest.yaml)
-cf push -f gen/db
-cf push -f gen/srv --random-route
 
-name:              my-bookshop-srv
-requested state:   started
-routes:            my-bookshop-srv-....cfapps.....hana.ondemand.com
+cf push -f gen/db
+
+cf push -f gen/srv --random-route  (create app)
+
+cf apps
 
 -Update-
 
-cf delete myapp
-cf apps
+cf delete myapp (optional)
 
 cf push
 
