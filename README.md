@@ -28,21 +28,30 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 ## Create a Business Service with Node.js Using Visual Studio Code (Commands)
 
 npm i -g @sap/cds-dk
+
 cds
 
 cds init bookshop
+
 cds add samples
 
 code .
 
 npm install
+
 cds watch
 
-npm i sqlite3 -D
+Package.json kind: sql
+
+npm i sqlite3 -D  
 
 cds deploy --to sqlite:db/my-bookshop.db
 
-sqlite3 db/my-bookshop.db -cmd .dump
+sqlite3 db/my-bookshop.db -cmd .dump  
+
+Test Postman
+
+Package.json kind: Hana
 
 npm add @sap/hana-client --save
 
