@@ -25,7 +25,7 @@ File or Folder | Purpose
 Learn more at https://cap.cloud.sap/docs/get-started/.
 
 
-## Create a Business Service with Node.js Using Visual Studio Code (Commands)
+## Create a Business Service with Node.js Using Visual Studio Code 
 
 npm i -g @sap/cds-dk
 
@@ -33,13 +33,13 @@ cds
 
 cds init bookshop
 
+cd bookshop
+
 cds add samples
 
 code .
 
 npm install
-
-cds watch
 
 Package.json kind: sql
 
@@ -47,9 +47,11 @@ npm i sqlite3 -D
 
 cds deploy --to sqlite:db/my-bookshop.db
 
-sqlite3 db/my-bookshop.db -cmd .dump  
+sqlite3 db/my-bookshop.db -cmd .dump  (Check .tables, Exit .quit)
 
-Test Postman
+cds watch
+
+Test Postman  (Postman.json)
 
 Package.json kind: Hana
 
