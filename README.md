@@ -23,3 +23,46 @@ File or Folder | Purpose
 ## Learn More
 
 Learn more at https://cap.cloud.sap/docs/get-started/.
+
+
+## Create a Business Service with Node.js Using Visual Studio Code (Commands)
+
+npm i -g @sap/cds-dk
+cds
+
+cds init bookshop
+cds add samples
+
+code .
+
+npm install
+cds watch
+
+npm i sqlite3 -D
+
+cds deploy --to sqlite:db/my-bookshop.db
+
+sqlite3 db/my-bookshop.db -cmd .dump
+
+npm add @sap/hana-client --save
+
+cf create-service hanatrial hdi-shared my-bookshop-db
+
+cds build --production   (create tables and manifest.yaml)
+cf push -f gen/db
+cf push -f gen/srv --random-route
+
+name:              my-bookshop-srv
+requested state:   started
+routes:            my-bookshop-srv-....cfapps.....hana.ondemand.com
+
+-Update-
+
+cf delete myapp
+cf apps
+
+cf push
+
+cf logs myapp --recent
+
+cf logs myapp | findstr /V RTR
